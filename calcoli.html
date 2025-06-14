@@ -16,11 +16,28 @@
   </header>
 
   <main>
-    <p>Qui inseriremo un piccolo calcolo automatico nella prossima lezione.</p>
+    <h2>Somma di due numeri</h2>
+
+    <input type="number" id="num1" placeholder="Numero 1">
+    <input type="number" id="num2" placeholder="Numero 2">
+    <button onclick="calcola()">Calcola</button>
+
+    <p id="risultato"></p>
   </main>
 
   <footer>
     <p>&copy; 2025 Riccardo Engin Righini</p>
   </footer>
+
+  <script>
+    function calcola() {
+      const a = parseFloat(document.getElementById('num1').value);
+      const b = parseFloat(document.getElementById('num2').value);
+      const risultato = a + b;
+
+      document.getElementById('risultato').innerText =
+        isNaN(risultato) ? "Inserisci due numeri validi" : `Risultato: ${risultato}`;
+    }
+  </script>
 </body>
 </html>
