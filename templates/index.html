@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Somma con Flask</title>
+</head>
+<body>
+  <h1>Calcolo della somma (via Python Flask)</h1>
+  <form method="post">
+    <input type="number" name="num1" placeholder="Numero 1" required>
+    <input type="number" name="num2" placeholder="Numero 2" required>
+    <button type="submit">Calcola</button>
+  </form>
+
+  {% if risultato is not none %}
+    <p>Risultato: <strong>{{ risultato }}</strong></p>
+  {% endif %}
+</body>
+</html>

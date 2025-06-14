@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Calcoli</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Calcoli</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/calcoli">Calcoli</a>
+      <a href="/contatti">Contatti</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Somma tra due numeri</h2>
+    <form method="post">
+      <input type="number" name="num1" required>
+      <input type="number" name="num2" required>
+      <button type="submit">Calcola</button>
+    </form>
+    {% if risultato is not none %}
+      <p>Risultato: {{ risultato }}</p>
+    {% endif %}
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Riccardo Engin Righini</p>
+  </footer>
+</body>
+</html>
